@@ -4,15 +4,9 @@
       "type": "java",
       "name": "CodeLens (Launch) - BinarySearch",
       "request": "launch",
-      "mainClass": "BinarySearch",
-      "projectName": "test"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - BinarySearch",
-      "request": "launch",
-      "mainClass": "BinarySearch",
-      "projectName": "algs_2397a1ac"
+      "mainClass": "app.BinarySearch",
+      "projectName": "test",
+      "args": "raw/tinyW.txt < raw/tinyT.txt"
     }
   ]
 }

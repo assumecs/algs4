@@ -1,5 +1,9 @@
 package app;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 import utils.In;
 import utils.StdIn;
@@ -41,4 +45,19 @@ public class BinarySearch {
       }
     }
   }
+
+  public static void mainNew(String[] args) {
+    // int[] whitelist = In.readInts(args[0]);
+    int[] whitelist = {84, 48, 68, 10, 18, 98, 12, 23, 54, 57, 33, 16, 77, 11, 29};
+    List<Integer> src = Arrays.asList(23, 50, 10, 99, 18, 23, 98, 84, 11, 10, 48, 77, 13, 54, 98, 77, 77, 68);
+    Iterator<Integer> iter = src.iterator();
+    Arrays.sort(whitelist);
+    while (iter.hasNext()) {
+      int key = iter.next();
+      if (rank(key, whitelist) < 0) {
+        StdOut.println(key);
+      }
+    }
+  }
+
 }
