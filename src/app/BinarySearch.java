@@ -1,6 +1,5 @@
 package app;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -35,7 +34,21 @@ public class BinarySearch {
     return -1;
   }
 
+  @SuppressWarnings("deprecated")
   public static void main(String[] args) {
+    int[] whitelist = In.readInts(args[0]);
+    In in = new In(args[1]);
+    Arrays.sort(whitelist);
+    while (in.hasNextLine()) {
+      int key = Integer.parseInt(in.readLine());
+      if (rank(key, whitelist) < 0) {
+        StdOut.println(key);
+      }
+    }
+  }
+
+  @SuppressWarnings("deprecated")
+  public static void mainOld(String[] args) {
     int[] whitelist = In.readInts(args[0]);
     Arrays.sort(whitelist);
     while (!StdIn.isEmpty()) {

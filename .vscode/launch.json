@@ -6,7 +6,7 @@
       "request": "launch",
       "mainClass": "app.BinarySearch",
       "projectName": "test",
-      "args": "raw/tinyW.txt < raw/tinyT.txt"
+      "args": ["raw/tinyW.txt", "raw/tinyT.txt"]
     }
   ]
 }

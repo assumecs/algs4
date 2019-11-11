@@ -2029,6 +2029,11 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 
     private static class RetinaImageIcon extends ImageIcon {
 
+        /**
+         *
+         */
+        private static final long serialVersionUID = 3731888146713842328L;
+
         public RetinaImageIcon(Image image) {
             super(image);
         }
