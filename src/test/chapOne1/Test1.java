@@ -73,7 +73,103 @@ public class Test1 {
             t = (9.0/t + t) / 2.0;
         StdOut.printf("%.5f\n", t); // 
         // b
+        int sum = 0;
+        for (int i = 1; i < 1000; i++) {
+            for (int j = 0; j < i; j++) {
+                sum++;
+            }
+        }
+        StdOut.println(sum);
         // c
+        int sum2 = 0;
+        for (int i = 1; i < 1000; i *= 2) {
+            for ( int j = 0; j < 1000; j++) {
+                sum2++;
+            }
+        }
+        StdOut.println(sum2);
     }
+
+    @Test
+    public void test1_8() {
+        System.out.println('b');
+        System.out.println('b' + 'c');
+        System.out.println((char) ('a' + 4));
+    }
+
+    @Test
+    public void test1_9() {
+        int N = 555;
+        StdOut.println(toBinaryString(N));
+        StdOut.println(Integer.toBinaryString(N));
+    }
+
+    public static String toBinaryString(int N) {
+        String s = "";
+        for(int n = N; n > 0; n /= 2) {
+            s = (n % 2) +s;
+        }
+        return s;
+    }
+
+    @Test
+    public void test1_10() {
+        // int[] a;
+        // for (int i = 0; i < 10; i++) {
+        //     a[i] = i * i; // The local variable a may not have been initialized
+        // }
+    }
+
+    @Test
+    public void test1_11() {
+        // 打印一个二维布尔数组，*表示真，空格表示假
+        boolean[][] arr = {
+            {true, false, true},
+            {false, false, true},
+            {true, false, false}
+        };
+        for (int i = -1; i < arr.length; i++) {
+            for (int j = -1; j < arr[0].length; j++) {
+                if(i < 0 && j < 0) {
+                    StdOut.print("x");
+                } else if(i < 0) {
+                    StdOut.print(j + 1);
+                } else if(j < 0) {
+                    StdOut.print(i + 1);
+                } else if(arr[i][j]) {
+                    StdOut.print("*");
+                } else {
+                    StdOut.print(" ");
+                }
+            }
+            StdOut.println();
+        }
+    }
+
+    @Test
+    public void test1_12() {
+        int[] a = new int[10];
+        for (int i = 0; i < 10; i++)
+            a[i] = 9 - i;
+        for (int i = 0; i < 10; i++)
+            a[i] = a[a[i]];
+        for (int i = 0; i < 10; i++) 
+            System.out.println(i);
+    }
+
+    @Test
+    public void test1_13() {
+        int[][] arr = {
+            {1, 2, 3},
+            {4, 5, 6},
+            // {7, 8, 9}
+        };
+        for(int i = 0; i < arr[0].length; i++){
+            for(int j = 0; j < arr.length; j++)
+                StdOut.print(arr[j][i]);
+            StdOut.println();
+        }
+    }
+    
     
 }
